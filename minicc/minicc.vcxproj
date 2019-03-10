@@ -23,6 +23,10 @@
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>gccdriver</RootNamespace>
     <ProjectName>minicc</ProjectName>
+    <SccProjectName>Svn</SccProjectName>
+    <SccAuxPath>Svn</SccAuxPath>
+    <SccLocalPath>Svn</SccLocalPath>
+    <SccProvider>SubversionScc</SccProvider>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -88,7 +92,8 @@
       </AdditionalDependencies>
     </Lib>
     <PostBuildEvent>
-      <Command>copy .\src\Common.hpp ..\Debug\x86\include\
+      <Command>md ..\Debug\x86\include\
+copy .\src\Common.hpp ..\Debug\x86\include\
 copy .\src\Error.hpp ..\Debug\x86\include\
 copy .\src\Traits.hpp ..\Debug\x86\include\
 copy .\src\AlgorithmComDefine.hpp ..\Debug\x86\include\
@@ -123,7 +128,8 @@ copy .\src\ComplexDecompressor.hpp ..\Debug\x86\include\</Command>
       </AdditionalDependencies>
     </Lib>
     <PostBuildEvent>
-      <Command>copy .\src\Common.hpp ..\Debug\x64\include\
+      <Command>md ..\Debug\x64\include\
+copy .\src\Common.hpp ..\Debug\x64\include\
 copy .\src\Error.hpp ..\Debug\x64\include\
 copy .\src\Traits.hpp ..\Debug\x64\include\
 copy .\src\AlgorithmComDefine.hpp ..\Debug\x64\include\
@@ -162,7 +168,8 @@ copy .\src\ComplexDecompressor.hpp ..\Debug\x64\include\</Command>
       </AdditionalDependencies>
     </Lib>
     <PostBuildEvent>
-      <Command>copy .\src\Common.hpp ..\Release\x86\include\
+      <Command>md ..\Release\x86\include\
+copy .\src\Common.hpp ..\Release\x86\include\
 copy .\src\Error.hpp ..\Release\x86\include\
 copy .\src\Traits.hpp ..\Release\x86\include\
 copy .\src\AlgorithmComDefine.hpp ..\Release\x86\include\
@@ -201,7 +208,8 @@ copy .\src\ComplexDecompressor.hpp ..\Release\x86\include\</Command>
       </AdditionalDependencies>
     </Lib>
     <PostBuildEvent>
-      <Command>copy .\src\Common.hpp ..\Release\x64\include\
+      <Command>md ..\Release\x64\include\
+copy .\src\Common.hpp ..\Release\x64\include\
 copy .\src\Error.hpp ..\Release\x64\include\
 copy .\src\Traits.hpp ..\Release\x86\include\
 copy .\src\AlgorithmComDefine.hpp ..\Release\x64\include\
